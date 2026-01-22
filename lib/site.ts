@@ -73,6 +73,7 @@ export const siteConfig = {
       { name: 'Home', href: '/' },
       { name: 'Menu', href: '/menu' },
       { name: 'About', href: '/about' },
+      { name: 'Food Stories', href: '/food-stories' },
       { name: 'Gallery', href: '/gallery' },
       { name: 'Catering', href: '/catering' },
       { name: 'Contact', href: '/contact' },
