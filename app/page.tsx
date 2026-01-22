@@ -259,7 +259,7 @@ export default function Home() {
               'https://images.unsplash.com/photo-1599974768596-e345fc3a0daf?w=600&q=80',
               'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&q=80',
             ]).flat().map((src, idx) => (
-              <div key={idx} className="flex-shrink-0 w-80 aspect-[4/3] rounded-lg overflow-hidden border-4 border-[var(--accent)]/40 shadow-2xl hover:scale-105 transition-transform">
+              <div key={idx} className="flex-shrink-0 w-80 aspect-[4/3] rounded-lg overflow-hidden border-4 border-[var(--accent)]/60 shadow-2xl hover:scale-105 hover:border-[var(--accent)] transition-all">
                 <Image src={src} alt={`Mexican dish ${idx}`} width={320} height={240} className="object-cover w-full h-full brightness-105" />
               </div>
             ))}
