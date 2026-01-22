@@ -1,26 +1,138 @@
 @import "tailwindcss";
 
+/* ===============================================
+   🌮 CASA MEXICO - MEXICAN RESTAURANT THEME
+   ===============================================
+   Orange & Green - Vibrant & Festive Colors
+   =============================================== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* ========================================
+     PRIMARY COLORS (Vibrant Orange)
+     ======================================== */
+  --primary: #EA580C;           /* Orange-600 - Vibrant */
+  --primary-dark: #C2410C;      /* Orange-700 - Deep */
+  --primary-light: #FB923C;     /* Orange-400 - Bright */
+  --primary-50: #FFF7ED;        /* Orange-50 */
+  --primary-100: #FFEDD5;       /* Orange-100 */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* ========================================
+     SECONDARY COLORS (Fresh Green)
+     ======================================== */
+  --secondary: #16A34A;         /* Green-600 - Fresh */
+  --secondary-dark: #15803D;    /* Green-700 */
+  --secondary-light: #22C55E;   /* Green-500 */
+  --secondary-50: #F0FDF4;      /* Green-50 */
+  --secondary-100: #DCFCE7;     /* Green-100 */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* ========================================
+     ACCENT COLORS (Festive Yellow)
+     ======================================== */
+  --accent: #FBBF24;            /* Yellow-400 - Festive */
+  --accent-dark: #F59E0B;       /* Yellow-500 */
+  --accent-light: #FCD34D;      /* Yellow-300 */
+
+  /* ========================================
+     BACKDROP/BACKGROUND COLORS
+     ======================================== */
+  --backdrop-primary: #FFF7ED;     /* Warm orange */
+  --backdrop-secondary: #F0FDF4;   /* Soft green */
+
+  /* ========================================
+     TOP BAR
+     ======================================== */
+  --topbar-bg: var(--primary);
+  --topbar-text: #ffffff;
+
+  /* ========================================
+     CTA BUTTONS
+     ======================================== */
+  --cta-primary-bg: var(--primary);
+  --cta-primary-hover: var(--primary-dark);
+  --cta-secondary-bg: var(--secondary);
+  --cta-secondary-hover: var(--secondary-dark);
+
+  /* ========================================
+     STATS BAR
+     ======================================== */
+  --stats-bg-start: var(--primary);
+  --stats-bg-end: var(--primary-dark);
+
+  /* ========================================
+     CORE SURFACES
+     ======================================== */
+  --bg: #FFFEFB;
+  --surface: #ffffff;
+  
+  /* ========================================
+     TEXT COLORS
+     ======================================== */
+  --text: #0f172a;
+  --text-muted: #475569;
+  
+  /* ========================================
+     TYPOGRAPHY - 5-Size System
+     ======================================== */
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Bebas Neue', 'Impact', sans-serif;
+  
+  --text-display: 3rem;
+  --text-heading: 2.25rem;
+  --text-subheading: 1.25rem;
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+  
+  --weight-normal: 400;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+
+  --brand: var(--primary);
+  --brand-2: var(--primary-dark);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(900px 500px at 15% 0%, rgba(234, 88, 12, 0.08), transparent 55%),
+    radial-gradient(900px 500px at 85% 10%, rgba(22, 163, 74, 0.06), transparent 55%),
+    var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+::selection {
+  background: rgba(234, 88, 12, 0.18);
+}
+
+.text-display {
+  font-size: var(--text-display);
+  line-height: var(--leading-tight);
+  font-weight: var(--weight-bold);
+}
+
+.text-heading {
+  font-size: var(--text-heading);
+  line-height: var(--leading-tight);
+  font-weight: var(--weight-bold);
+}
+
+.text-subheading {
+  font-size: var(--text-subheading);
+  line-height: var(--leading-normal);
+  font-weight: var(--weight-semibold);
+}
+
+.text-body {
+  font-size: var(--text-body);
+  line-height: var(--leading-relaxed);
+  font-weight: var(--weight-normal);
+}
+
+.text-small {
+  font-size: var(--text-small);
+  line-height: var(--leading-normal);
+  font-weight: var(--weight-normal);
 }
