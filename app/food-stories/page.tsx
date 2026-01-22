@@ -57,8 +57,8 @@ export default function FoodStoriesPage() {
                 <h1 className="text-heading md:text-display mb-4 font-serif leading-tight">
                   {featuredStory.title}
                 </h1>
-                <p className="text-subheading text-[var(--secondary)] font-bold mb-6 text-chinese" style={{ fontFamily: 'Noto Sans SC' }}>
-                  {featuredStory.titleChinese}
+                <p className="text-subheading text-[var(--secondary)] font-bold mb-6">
+                  {featuredStory.titleSpanish}
                 </p>
                 
                 <p className="text-body text-gray-700 mb-6 leading-relaxed">
@@ -182,8 +182,8 @@ export default function FoodStoriesPage() {
                   <h2 className="text-subheading font-bold text-gray-900 mb-2 group-hover:text-[var(--primary)] transition-colors line-clamp-2">
                     {story.title}
                   </h2>
-                  <p className="text-body text-[var(--secondary)] font-semibold mb-3 text-chinese" style={{ fontFamily: 'Noto Sans SC' }}>
-                    {story.titleChinese}
+                  <p className="text-body text-[var(--secondary)] font-semibold mb-3">
+                    {story.titleSpanish}
                   </p>
                   <p className="text-gray-700 mb-4 line-clamp-3 leading-relaxed">
                     {story.excerpt}
