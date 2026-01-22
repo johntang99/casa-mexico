@@ -71,7 +71,7 @@ export default function RootLayout({
         {children}
 
         {/* Footer */}
-        <footer className="border-t bg-gray-900 text-white py-12 px-4">
+        <footer className="border-t text-white py-12 px-4" style={{ backgroundColor: '#305908' }}>
           <div className="container mx-auto max-w-6xl">
             <div className="grid md:grid-cols-4 gap-8 mb-8">
               <div>

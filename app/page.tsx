@@ -240,7 +240,7 @@ export default function Home() {
       </section>
 
       {/* Auto-Scrolling Gallery */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20" style={{ backgroundColor: '#305908' }}>
         <div className="text-center mb-12 px-4">
           <h2 className="text-heading text-white mb-4">A Visual Fiesta</h2>
         </div>
