@@ -288,6 +288,86 @@ export default function Home() {
         `}</style>
       </section>
 
+      {/* Elegant Atmosphere - Restaurant Photos */}
+      <section className="py-24 px-4 bg-gradient-to-br from-[var(--backdrop-primary)] to-[var(--backdrop-secondary)]">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-16">
+            <span className="inline-block px-6 py-3 bg-white rounded-full text-small font-bold text-[var(--primary)] border-2 border-[var(--secondary)]/50 shadow-lg mb-4">
+              OUR RESTAURANT
+            </span>
+            <h2 className="text-heading mb-4 font-bold">Vibrant Atmosphere</h2>
+            <p className="text-subheading text-[var(--secondary)] font-bold">
+              Ambiente Vibrante
+            </p>
+            <p className="text-body text-gray-600 max-w-3xl mx-auto mt-4">
+              A welcoming space where tradition meets modern comfort
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            {[
+              {
+                src: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
+                title: 'Main Dining',
+                titleSpanish: 'Comedor Principal',
+              },
+              {
+                src: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80',
+                title: 'Bar Area',
+                titleSpanish: 'Área de Bar',
+              },
+              {
+                src: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&q=80',
+                title: 'Patio Seating',
+                titleSpanish: 'Terraza',
+              },
+            ].map((photo, idx) => (
+              <div
+                key={idx}
+                className="group relative rounded-2xl overflow-hidden border-4 border-[var(--secondary)]/30 shadow-xl hover:shadow-2xl hover:border-[var(--primary)]/50 transition-all"
+              >
+                <div className="aspect-[4/3] relative">
+                  <Image
+                    src={photo.src}
+                    alt={photo.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500 brightness-105"
+                    sizes="33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                  
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-center text-white">
+                    <h3 className="text-subheading font-bold mb-1 drop-shadow-lg">
+                      {photo.title}
+                    </h3>
+                    <p className="text-body text-[var(--accent)] font-medium">
+                      {photo.titleSpanish}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { icon: '🌮', title: 'Festive Decor', desc: 'Vibrant Mexican atmosphere' },
+              { icon: '👨‍👩‍👧‍👦', title: 'Family Friendly', desc: 'Perfect for gatherings' },
+              { icon: '🍽️', title: 'Full Service', desc: 'Dine-in, takeout & delivery' },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white/80 backdrop-blur rounded-xl p-6 border-2 border-[var(--secondary)]/20 text-center hover:border-[var(--primary)] transition-all"
+              >
+                <div className="text-display mb-3">{item.icon}</div>
+                <h4 className="text-body font-bold text-gray-900 mb-2">{item.title}</h4>
+                <p className="text-small text-gray-600">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Reviews Rail */}
       <section className="py-20 px-4 bg-white">
         <div className="container mx-auto max-w-7xl">
