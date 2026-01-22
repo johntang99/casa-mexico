@@ -12,21 +12,21 @@ export const siteConfig = {
 
   contact: {
     phone: {
-      display: '(555) 123-4567',
-      raw: '+15551234567',
-      href: 'tel:+15551234567',
+      display: '646-555-5555',
+      raw: '+16465555555',
+      href: 'tel:+16465555555',
     },
     email: {
-      display: 'hola@casamexico.com',
-      href: 'mailto:hola@casamexico.com',
+      display: 'contact@casamexico.com',
+      href: 'mailto:contact@casamexico.com',
     },
     address: {
-      street: '123 Mexico Street',
+      street: '123 Mexico Rd',
       city: 'New York',
       state: 'NY',
-      zip: '10003',
+      zip: '10001',
       country: 'United States',
-      full: '123 Mexico Street, New York, NY 10003',
+      full: '123 Mexico Rd, New York, NY 10001',
     },
     hours: {
       monday: { open: '11:00 AM', close: '11:00 PM' },

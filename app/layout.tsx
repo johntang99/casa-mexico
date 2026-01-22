@@ -72,13 +72,74 @@ export default function RootLayout({
 
         {/* Footer */}
         <footer className="border-t bg-gray-900 text-white py-12 px-4">
-          <div className="container mx-auto max-w-6xl text-center">
-            <div className="text-3xl mb-4">🌮</div>
-            <h3 className="font-bold text-subheading mb-2">{siteConfig.brand.name}</h3>
-            <p className="text-gray-300 mb-8">{siteConfig.brand.tagline}</p>
-            <p className="text-small text-gray-400">
-              &copy; {new Date().getFullYear()} {siteConfig.brand.name}. All rights reserved.
-            </p>
+          <div className="container mx-auto max-w-6xl">
+            <div className="grid md:grid-cols-4 gap-8 mb-8">
+              <div>
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-3xl">🌮</span>
+                  <h3 className="font-bold text-subheading">{siteConfig.brand.name}</h3>
+                </div>
+                <p className="text-small text-[var(--accent)] italic mb-2">
+                  {siteConfig.brand.slogan}
+                </p>
+                <p className="text-gray-300 text-small">{siteConfig.brand.tagline}</p>
+              </div>
+              
+              <div>
+                <h4 className="font-bold mb-4">Popular Items</h4>
+                <ul className="space-y-2">
+                  {siteConfig.navigation.footer.menu.map((link) => (
+                    <li key={link.href}>
+                      <Link href={link.href} className="text-gray-300 hover:text-white transition-colors text-small">
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="font-bold mb-4">Quick Links</h4>
+                <ul className="space-y-2">
+                  {siteConfig.navigation.footer.quickLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link href={link.href} className="text-gray-300 hover:text-white transition-colors text-small">
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="font-bold mb-4">Contact</h4>
+                <div className="space-y-3 text-small">
+                  <p className="text-gray-300">{siteConfig.contact.address.street}</p>
+                  <p className="text-gray-300">{siteConfig.contact.address.city}, {siteConfig.contact.address.state} {siteConfig.contact.address.zip}</p>
+                  <a href={siteConfig.contact.phone.href} className="text-gray-300 flex items-center gap-2 hover:text-white">
+                    <Phone className="w-4 h-4" />
+                    {siteConfig.contact.phone.display}
+                  </a>
+                  <a href={siteConfig.contact.email.href} className="text-gray-300 hover:text-white block">
+                    {siteConfig.contact.email.display}
+                  </a>
+                  <div className="pt-3">
+                    <h5 className="font-semibold mb-2">Hours</h5>
+                    {siteConfig.contact.hoursFormatted.map((hour, i) => (
+                      <p key={i} className="text-gray-300 text-small">
+                        {hour.days}: {hour.hours}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="border-t border-gray-700 pt-8 text-center text-small">
+              <p className="text-gray-300">
+                &copy; {new Date().getFullYear()} {siteConfig.brand.name}. All rights reserved.
+              </p>
+            </div>
           </div>
         </footer>
       </body>
